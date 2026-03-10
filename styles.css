@@ -593,10 +593,10 @@ Pricing Section
 }
 
 .tier-logo {
-    height: 60px;
-    width: auto;
-    max-width: 150px;
-    object-fit: contain;
+    height: 90px;
+    width: 90px;
+    object-fit: cover;
+    border-radius: var(--radius-md);
     margin-bottom: 10px;
 }
 
