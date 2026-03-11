@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Duolingo Premium - Super & Max</title>
+    <title>Duolingo</title>
     <meta name="description" content="Nâng cấp trải nghiệm học ngoại ngữ của bạn với Duolingo Super và Duolingo Max. Mở khóa học tập không giới hạn, không quảng cáo và hơn thế nữa!">
     
     <!-- Google Fonts -->
@@ -24,8 +24,7 @@
     <header class="navbar">
         <div class="container nav-content">
             <div class="logo">
-                <span class="owl-icon">🦉</span>
-                <span class="brand-name">Duo<span class="premium-text">Premium</span></span>
+                <img src="assets/duoling_logo.svg" alt="Duolingo" class="logo-img">
             </div>
             <nav class="desktop-nav">
                 <a href="#hero">Trang chủ</a>
@@ -49,8 +48,8 @@
         <div class="container hero-content">
             <div class="hero-text">
                 <div class="badge">✨ Trải nghiệm học tập đỉnh cao</div>
-                <h1>Mở Khóa Tiềm Năng Cùng <span class="premium-text">Duolingo Premium</span></h1>
-                <p>Học ngoại ngữ nhanh hơn, vui hơn và hoàn toàn không có quảng cáo. Trải nghiệm tính năng AI thông minh nhất từ trước đến nay với Duolingo Max.</p>
+                <h1>Mở Khóa Tiềm Năng Cùng <span class="premium-text">Duolingo</span></h1>
+                <p>Khám phá hơn 40 ngôn ngữ trên toàn thế giới cùng Duolingo - từ phổ biến như tiếng Anh, Trung, Tây Ban Nha đến những ngôn ngữ độc đáo khác. Học nhanh hơn, vui hơn và không bị gián đoạn bởi quảng cáo với gói Duolingo Super.<br><br>Nâng cấp lên Duolingo Max để trải nghiệm AI thông minh nhất từ trước đến nay, giúp bạn luyện tập hội thoại, hiểu bài sâu hơn và tiến bộ mỗi ngày. 🚀</p>
                 <div class="hero-buttons">
                     <a href="#pricing" class="btn btn-super">Xem Bảng Giá</a>
                     <a href="#guide" class="btn btn-primary btn-outline">Hướng Dẫn Mua</a>
@@ -77,8 +76,9 @@
             <div class="pricing-cards">
                 <!-- Super Card -->
                 <div class="pricing-card card-super">
+                    <div class="super-badge">Ưa Chuộng</div>
                     <div class="card-header">
-                        <img src="assets/super_icon.png" alt="Super Logo" class="tier-logo" id="super-logo-img">
+                        <img src="assets/super_icon.jpeg" alt="Super Logo" class="tier-logo" id="super-logo-img">
                         <h3>Super</h3>
                     </div>
                     <div class="card-price">
@@ -91,15 +91,17 @@
                         <li><i class="fa-solid fa-check text-green"></i> Bài tập cá nhân hóa</li>
                         <li class="feature-disabled"><i class="fa-solid fa-xmark"></i> Không có AI Roleplay</li>
                         <li class="feature-disabled"><i class="fa-solid fa-xmark"></i> Không có AI Explain My Answer</li>
+                        <li class="feature-empty" aria-hidden="true">&nbsp;</li>
+                        <li class="feature-empty" aria-hidden="true">&nbsp;</li>
                     </ul>
-                    <a href="https://zalo.me/0877677863" target="_blank" class="btn btn-super btn-block">Mua Ngay</a>
+                    <a href="https://zalo.me/0877677863" target="_blank" class="btn btn-super btn-block">Nâng Cấp Super</a>
                 </div>
 
                 <!-- Max Card -->
                 <div class="pricing-card card-max popular">
-                    <div class="popular-badge">Khuyên Dùng</div>
+                    <div class="popular-badge">Cao Cấp</div>
                     <div class="card-header">
-                        <img src="assets/max_icon.png" alt="Max Logo" class="tier-logo" id="max-logo-img">
+                        <img src="assets/max_icon.jpeg" alt="Max Logo" class="tier-logo" id="max-logo-img">
                         <h3>Max</h3>
                     </div>
                     <div class="card-price">
@@ -228,11 +230,11 @@
                 </div>
                 <div class="faq-item">
                     <div class="faq-question">
-                        <h4>Bao lâu sau khi thanh toán thì tôi nhận được tài khoản Premium?</h4>
+                        <h4>Bao lâu sau khi thanh toán thì tôi nhận được tài khoản Super/Max?</h4>
                         <i class="fa-solid fa-chevron-down"></i>
                     </div>
                     <div class="faq-answer">
-                        <p>Quy trình nâng cấp siêu tốc chỉ mất từ 3-5 giây sau khi chúng tôi nhận được username Duolingo của bạn.</p>
+                        <p>Quy trình nâng cấp siêu tốc chỉ mất từ <strong>10-15 giây</strong> sau khi chúng tôi nhận được username Duolingo của bạn.</p>
                     </div>
                 </div>
                 <div class="faq-item">
@@ -241,7 +243,7 @@
                         <i class="fa-solid fa-chevron-down"></i>
                     </div>
                     <div class="faq-answer">
-                        <p>Gói Super loại bỏ quảng cáo, cung cấp trái tim vô hạn và bài tập luyện lại. Gói Max bao gồm tất cả tính năng của Super, cộng thêm 2 tính năng AI độc quyền (sử dụng GPT-4): Roleplay (đóng vai hội thoại tình huống thực tế) và Explain My Answer (giải thích cấu trúc ngữ pháp tại sao bạn sai).</p>
+                        <p>Gói Super loại bỏ quảng cáo, cung cấp trái tim vô hạn và bài tập luyện lại. Gói Max bao gồm tất cả tính năng của Super, cộng thêm 2 tính năng AI độc quyền: Roleplay (đóng vai hội thoại tình huống thực tế với trợ lý AI Lily) và Explain My Answer (giải thích cấu trúc ngữ pháp tại sao bạn sai).</p>
                     </div>
                 </div>
                 <div class="faq-item">
@@ -262,8 +264,7 @@
         <div class="container footer-content">
             <div class="footer-info">
                 <div class="logo">
-                    <span class="owl-icon">🦉</span>
-                    <span class="brand-name">Duo<span class="premium-text" style="background-clip: text;">Premium</span></span>
+                    <img src="assets/duoling_logo.svg" alt="Duolingo" class="logo-img">
                 </div>
                 <p>Nền tảng cung cấp dịch vụ nâng cấp Duolingo Super & Max uy tín, giá rẻ và bảo hành uy tín hàng đầu Việt Nam.</p>
             </div>
@@ -274,7 +275,7 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2024 All rights reserved.</p>
+            <p>&copy; 2015 All rights reserved.</p>
         </div>
     </footer>
 

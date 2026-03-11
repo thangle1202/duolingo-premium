@@ -135,9 +135,13 @@ Buttons
 }
 
 .btn-super {
-    background-color: var(--duo-super-blue);
+    background-color: var(--duo-green);
     color: var(--white);
-    border-color: var(--duo-super-blue-dark);
+    border-color: var(--duo-green-dark);
+}
+
+.btn-super:hover {
+    background-color: var(--duo-green-light);
 }
 
 .btn-max {
@@ -149,12 +153,12 @@ Buttons
 .btn-zalo-outline {
     background-color: transparent;
     color: #0068ff;
-    border-color: var(--duo-gray-100);
+    border-color: #0068ff;
 }
 
 .btn-zalo-outline:hover {
     background-color: rgba(0, 104, 255, 0.05);
-    border-color: #0068ff;
+    border-color: #0052cc;
 }
 
 /* 
@@ -188,6 +192,12 @@ Navbar
     font-size: 24px;
     font-weight: 900;
     color: var(--duo-green);
+}
+
+.logo-img {
+    height: 36px;
+    width: auto;
+    display: block;
 }
 
 .premium-text {
@@ -260,8 +270,8 @@ Floating Widgets
 }
 
 .widget-phone {
-    background-color: #f12711;
-    background: linear-gradient(to right, #f5af19, #f12711);
+    background-color: var(--duo-green);
+    background: linear-gradient(135deg, var(--duo-green-light), var(--duo-green));
 }
 
 /* Animations */
@@ -530,11 +540,16 @@ Pricing Section
 =========================================
 */
 .pricing-cards {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+    grid-auto-rows: 1fr;
+    align-items: stretch;
     justify-content: center;
     gap: 30px;
-    flex-wrap: wrap;
     margin-top: 40px;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .pricing-card {
@@ -543,7 +558,11 @@ Pricing Section
     border: 2px solid var(--duo-gray-100);
     padding: 40px 30px;
     width: 100%;
-    max-width: 400px;
+    max-width: 520px;
+    flex: 1;
+    min-width: 380px;
+    min-height: 0;
+    height: 100%;
     position: relative;
     box-shadow: var(--shadow-sm);
     transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -556,8 +575,12 @@ Pricing Section
     box-shadow: var(--shadow-lg);
 }
 
+.card-super {
+    border-color: var(--duo-green);
+}
+
 .card-super:hover {
-    border-color: var(--duo-super-blue);
+    border-color: var(--duo-green-dark);
 }
 
 .card-max:hover {
@@ -565,13 +588,12 @@ Pricing Section
 }
 
 .popular {
-    transform: scale(1.05);
     border-color: var(--duo-max-purple);
     box-shadow: var(--shadow-md);
 }
 
 .popular:hover {
-    transform: scale(1.05) translateY(-5px);
+    transform: translateY(-5px);
 }
 
 .popular-badge {
@@ -579,22 +601,40 @@ Pricing Section
     top: -15px;
     left: 50%;
     transform: translateX(-50%);
-    background: linear-gradient(90deg, #ff9600, #ffc800);
+    background: linear-gradient(90deg, var(--duo-max-purple), var(--duo-max-purple-dark));
     color: white;
     padding: 5px 15px;
     border-radius: var(--radius-full);
     font-weight: 800;
     font-size: 14px;
-    box-shadow: 0 4px 10px rgba(255, 150, 0, 0.3);
+    box-shadow: 0 4px 10px rgba(194, 80, 231, 0.3);
+}
+
+.super-badge {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(90deg, var(--duo-green), var(--duo-green-light));
+    color: white;
+    padding: 5px 15px;
+    border-radius: var(--radius-full);
+    font-weight: 800;
+    font-size: 14px;
+    box-shadow: 0 4px 10px rgba(88, 204, 2, 0.3);
 }
 
 .card-header {
     margin-bottom: 20px;
 }
 
+.card-header h3 {
+    font-size: 32px;
+}
+
 .tier-logo {
-    height: 90px;
-    width: 90px;
+    height: 195px;
+    width: 270px;
     object-fit: cover;
     border-radius: var(--radius-md);
     margin-bottom: 10px;
@@ -630,20 +670,24 @@ Pricing Section
 
 .card-features li {
     margin-bottom: 15px;
-    font-size: 16px;
+    font-size: 18px;
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
 .card-features li i {
-    font-size: 18px;
+    font-size: 20px;
     min-width: 25px;
 }
 
 .feature-disabled {
     color: var(--duo-gray-200);
     text-decoration: line-through;
+}
+
+.feature-empty {
+    visibility: hidden;
 }
 
 /* 
@@ -932,6 +976,14 @@ Responsive
         grid-template-columns: repeat(2, 1fr);
     }
     
+    .pricing-cards {
+        justify-items: center;
+    }
+    
+    .pricing-card {
+        max-width: 100%;
+    }
+    
     .pricing-card.popular {
         transform: scale(1);
     }
@@ -943,6 +995,17 @@ Responsive
 @media (max-width: 600px) {
     .steps-grid {
         grid-template-columns: 1fr;
+    }
+    
+    .pricing-cards {
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+    
+    .pricing-card {
+        min-width: 0;
+        width: 100%;
+        max-width: 400px;
     }
     
     .footer-content {
