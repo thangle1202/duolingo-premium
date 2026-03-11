@@ -720,7 +720,7 @@ Feature Comparison Table
     border-bottom: none;
 }
 
-.col-super { color: var(--duo-super-blue-dark); }
+.col-super { color: var(--duo-green-dark); }
 .col-max { color: var(--duo-max-purple-dark); }
 
 .highlight-row {
