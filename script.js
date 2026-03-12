@@ -10,7 +10,8 @@ document.addEventListener('DOMContentLoaded', () => {
             const targetElement = document.querySelector(targetId);
             if(targetElement) {
                 const navHeight = document.querySelector('.navbar').offsetHeight;
-                const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - navHeight;
+                const extraOffset = -20; // Scroll more down for pricing (and other sections)
+                const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - navHeight - extraOffset;
                 
                 window.scrollTo({
                     top: targetPosition,
